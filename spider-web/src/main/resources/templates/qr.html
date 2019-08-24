@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.9" />
+    <title>二维码</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .back_img{
+            width: 506px;
+            height: 800px;
+            background-image: url("/images/weixin23.png");
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .back_img img{
+            position: absolute;
+            top: 621px;
+            left: 313px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back_img">
+        <img th:src="'/qr-img?code_url='+${codeurl}">
+    </div>
+</body>
+</html>

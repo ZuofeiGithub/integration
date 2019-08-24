@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=icon href=data:image/ico;base64,aWNv>
+    <script src=js/ipquery></script>
+    <script src=js/openinstall.js></script>
+    <title></title>
+    <style>#whiteBg {
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        position: fixed;
+        z-index: 100;
+        display: none;
+    }</style>
+    <link href=css/app.4261492e.css rel=preload as=style>
+    <link href=js/app.468a84f1.js rel=preload as=script>
+    <link href=js/chunk-vendors.0199dd8a.js rel=preload as=script>
+    <link href=css/app.4261492e.css rel=stylesheet>
+</head>
+<body>
+<div id=whiteBg></div>
+<noscript><strong>We're sorry but page doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong></noscript>
+<div id=app></div>
+<script src=js/chunk-vendors.0199dd8a.js></script>
+<script src=js/app.468a84f1.js></script>
+</body>
+<script>// 监听页面是否被覆盖
+document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === 'hidden') {
+        document.getElementById('whiteBg').style.display = 'block'
+    } else {
+        document.getElementById('whiteBg').style.display = 'none'
+    }
+});</script>
+<script src=js/statistics.js></script>
+</html>
