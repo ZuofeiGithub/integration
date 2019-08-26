@@ -3,10 +3,35 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/integration?useSSL=false&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/integration?useSSL=false&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    #http://localhost/druid
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/integration?useSSL=false&characterEncoding=utf-8&allowMultiQueries=true&autoReconnect=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      filter: stat,wall,log4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-connect-error-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+      stat-view-servlet:
+        login-username: admin
+        login-password: admin
 mybatis:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.jiliwangluo.spider.api.entity
