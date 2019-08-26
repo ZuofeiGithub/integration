@@ -1,4 +1,4 @@
-package com.jikewangluo.spiderweb;
+package com.jikewangluo.spider.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

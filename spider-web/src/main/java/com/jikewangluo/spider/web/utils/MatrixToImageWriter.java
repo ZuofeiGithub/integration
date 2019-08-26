@@ -1,4 +1,4 @@
-package com.jikewangluo.spiderweb.utils;
+package com.jikewangluo.spider.web.utils;
 
 
 import com.google.zxing.common.BitMatrix;

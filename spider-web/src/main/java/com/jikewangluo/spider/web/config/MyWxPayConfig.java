@@ -1,4 +1,4 @@
-package com.jikewangluo.spiderweb.config;
+package com.jikewangluo.spider.web.config;
 
 import com.github.wxpay.sdk.WXPayConfig;
 import java.io.File;
