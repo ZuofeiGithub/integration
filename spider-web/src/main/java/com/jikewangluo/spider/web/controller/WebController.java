@@ -26,11 +26,26 @@ import java.util.Map;
  * @date: 2019/8/22 16:31
  */
 @Controller
-public class HelloWorldController {
+public class WebController {
 
+
+    /**
+     * 引流页面
+     * @return
+     */
     @GetMapping("/wrap")
     public String wrap(){
         return "wap.html";
+    }
+
+    @GetMapping("/nodelaymenu")
+    public String noDelayMenu(){
+        return "no_delay_menu.html";
+    }
+
+    @GetMapping("/blur")
+    public String blur(){
+        return "blur.html";
     }
 
     @GetMapping("/hello")
